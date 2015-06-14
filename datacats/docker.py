@@ -7,7 +7,10 @@
 from __future__ import absolute_import
 
 from os import environ, devnull
-from requests.packages.urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
+try:
+    from requests.packages.urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
+except ImportError:
+    from urllib3.exceptions import InsecureRequestWarning, InsecurePlatformWarning
 import json
 import subprocess
 import tempfile
