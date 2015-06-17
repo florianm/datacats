@@ -23,6 +23,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -q -y install \
         apache2 \
         libapache2-mod-wsgi \
         libgeos-dev \
+        libmysqlclient-dev \
         libcurl4-openssl-dev
 
 #Configure webserver
