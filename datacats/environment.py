@@ -809,7 +809,7 @@ class Environment(object):
                 rw={self.sitedir + '/files': '/var/www/storage',
                     self.sitedir + '/run/development.ini': 
                         '/project/development.ini',
-                    self.sitedir + 'var/www/flickrapi-tokencache':
+                    self.sitedir + '/flickrapi-tokencache':
                         '/root/.flickr'},
                 ro=dict({
                     self.target: '/project/',
