@@ -798,8 +798,8 @@ class Environment(object):
 
         if datapusher:
             if 'datapusher' not in self.containers_running():
-                raise DatacatsError(container_logs(self._get_container_name('datapusher'), "all",
-                                                   False, False))
+                raise DatacatsError(container_logs(
+                    self._get_container_name('datapusher'), "all", False, False))
             links[self._get_container_name('datapusher')] = 'datapusher'
 
         try:
@@ -809,8 +809,8 @@ class Environment(object):
                 rw={self.sitedir + '/files': '/var/www/storage',
                     self.sitedir + '/run/development.ini': 
                         '/project/development.ini',
-                    self.sitedir + '/root/.flickr' : 
-                        'var/www/flickrapi-tokencache'},
+                    self.sitedir + 'var/www/flickrapi-tokencache':
+                        '/root/.flickr'},
                 ro=dict({
                     self.target: '/project/',
                     WEB: '/scripts/web.sh'}, **ro),
