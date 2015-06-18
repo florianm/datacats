@@ -818,7 +818,7 @@ class Environment(object):
                 name=self._get_container_name('web'),
                 image='datacats/web',
                 rw={self.sitedir + '/files': '/var/www/storage',
-                    self.sitedir + '/run/development.ini': 
+                    self.sitedir + '/run/development.ini':
                         '/project/development.ini',
                     self.sitedir + '/flickrapi-tokencache':
                         '/root/.flickr'},
