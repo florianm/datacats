@@ -807,8 +807,10 @@ class Environment(object):
                 name=self._get_container_name('web'),
                 image='datacats/web',
                 rw={self.sitedir + '/files': '/var/www/storage',
-                    self.sitedir + '/run/development.ini':
-                        '/project/development.ini'},
+                    self.sitedir + '/run/development.ini': 
+                        '/project/development.ini',
+                    self.sitedir + '/root/.flickr' : 
+                        'var/www/flickrapi-tokencache'},
                 ro=dict({
                     self.target: '/project/',
                     WEB: '/scripts/web.sh'}, **ro),
